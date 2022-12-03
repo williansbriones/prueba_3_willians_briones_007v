@@ -4,6 +4,11 @@
  */
 package com.mycompany.prueba_3;
 
+import com.mycompany.prueba_3.Vistas.VistaArriendo;
+import com.mycompany.prueba_3.Vistas.VistaAuto;
+import com.mycompany.prueba_3.Vistas.VistaCliente;
+import com.mycompany.prueba_3.Vistas.VistaVendedor;
+
 /**
  *
  * @author Cetecom
@@ -26,21 +31,115 @@ public class Principal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jDesktopPane1 = new javax.swing.JDesktopPane();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        Venta = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+        Cliente = new javax.swing.JMenuItem();
+        Vendedor = new javax.swing.JMenuItem();
+        auto = new javax.swing.JMenuItem();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
+        jDesktopPane1.setLayout(jDesktopPane1Layout);
+        jDesktopPane1Layout.setHorizontalGroup(
+            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1112, Short.MAX_VALUE)
+        );
+        jDesktopPane1Layout.setVerticalGroup(
+            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 753, Short.MAX_VALUE)
+        );
+
+        jMenu1.setText("Registros");
+
+        Venta.setText("ventas");
+        Venta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VentaActionPerformed(evt);
+            }
+        });
+        jMenu1.add(Venta);
+
+        jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("Usuarios");
+
+        Cliente.setText("Cliente");
+        Cliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ClienteActionPerformed(evt);
+            }
+        });
+        jMenu2.add(Cliente);
+
+        Vendedor.setText("Vendedor");
+        Vendedor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VendedorActionPerformed(evt);
+            }
+        });
+        jMenu2.add(Vendedor);
+
+        auto.setText("Auto");
+        auto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                autoActionPerformed(evt);
+            }
+        });
+        jMenu2.add(auto);
+
+        jMenuBar1.add(jMenu2);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 430, Short.MAX_VALUE)
+            .addComponent(jDesktopPane1)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 323, Short.MAX_VALUE)
+            .addComponent(jDesktopPane1, javax.swing.GroupLayout.Alignment.TRAILING)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void VendedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VendedorActionPerformed
+        // TODO add your handling code here:
+        VistaVendedor VVendedor = new VistaVendedor();
+        jDesktopPane1.add(VVendedor);
+        VVendedor.setVisible(true);
+    }//GEN-LAST:event_VendedorActionPerformed
+
+    private void ClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ClienteActionPerformed
+        // TODO add your handling code here:
+        VistaCliente VCliente = new VistaCliente();
+        jDesktopPane1.add(VCliente);
+        VCliente.setVisible(true);
+        
+        
+        
+    }//GEN-LAST:event_ClienteActionPerformed
+
+    private void autoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_autoActionPerformed
+        // TODO add your handling code here:
+        VistaAuto VAuto = new VistaAuto();
+        jDesktopPane1.add(VAuto);
+        VAuto.setVisible(true);
+        
+    }//GEN-LAST:event_autoActionPerformed
+
+    private void VentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VentaActionPerformed
+        // TODO add your handling code here:
+        VistaArriendo VArriendo = new VistaArriendo();
+        jDesktopPane1.add(VArriendo);
+        VArriendo.setVisible(true);
+    }//GEN-LAST:event_VentaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +177,13 @@ public class Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem Cliente;
+    private javax.swing.JMenuItem Vendedor;
+    private javax.swing.JMenuItem Venta;
+    private javax.swing.JMenuItem auto;
+    private javax.swing.JDesktopPane jDesktopPane1;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenuBar jMenuBar1;
     // End of variables declaration//GEN-END:variables
 }
